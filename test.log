@@ -1,0 +1,309 @@
+DEBUG:paramiko.transport:starting thread (client mode): 0xfda9fe20
+DEBUG:paramiko.transport:Local version/idstring: SSH-2.0-paramiko_2.7.2
+DEBUG:paramiko.transport:Remote version/idstring: SSH-2.0-Cisco-1.25
+INFO:paramiko.transport:Connected (version 2.0, client Cisco-1.25)
+DEBUG:paramiko.transport:kex algos:['diffie-hellman-group-exchange-sha1', 'diffie-hellman-group14-sha1', 'diffie-hellman-group1-sha1'] server key:['ssh-rsa'] client encrypt:['aes128-ctr', 'aes192-ctr', 'aes256-ctr'] server encrypt:['aes128-ctr', 'aes192-ctr', 'aes256-ctr'] client mac:['hmac-sha1', 'hmac-sha1-96'] server mac:['hmac-sha1', 'hmac-sha1-96'] client compress:['none'] server compress:['none'] client lang:[''] server lang:[''] kex follows?False
+DEBUG:paramiko.transport:Kex agreed: diffie-hellman-group-exchange-sha1
+DEBUG:paramiko.transport:HostKey agreed: ssh-rsa
+DEBUG:paramiko.transport:Cipher agreed: aes128-ctr
+DEBUG:paramiko.transport:MAC agreed: hmac-sha1
+DEBUG:paramiko.transport:Compression agreed: none
+DEBUG:paramiko.transport:Got server p (2048 bits)
+DEBUG:paramiko.transport:kex engine KexGex specified hash_algo <built-in function openssl_sha1>
+DEBUG:paramiko.transport:Switch to new keys ...
+DEBUG:paramiko.transport:Adding ssh-rsa host key for 10.100.100.3: b'8346f8cd78289becf6e0c81529981c2f'
+DEBUG:paramiko.transport:userauth is OK
+INFO:paramiko.transport:Authentication (password) successful!
+DEBUG:paramiko.transport:[chan 0] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 0] Max packet out: 4096 bytes
+DEBUG:paramiko.transport:Secsh channel 0 opened.
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:netmiko:write_channel: b'terminal width 511\n'
+DEBUG:netmiko:Pattern is: terminal width 511
+DEBUG:netmiko:_read_channel_expect read_data: 
+LABSWiL3_SVBA>
+DEBUG:netmiko:_read_channel_expect read_data: t
+DEBUG:netmiko:_read_channel_expect read_data: ermi
+DEBUG:netmiko:_read_channel_expect read_data: nal 
+DEBUG:netmiko:_read_channel_expect read_data: widt
+DEBUG:netmiko:_read_channel_expect read_data: h 51
+DEBUG:netmiko:_read_channel_expect read_data: 1
+LABSWiL3_SVBA>
+DEBUG:netmiko:Pattern found: terminal width 511 
+LABSWiL3_SVBA>terminal width 511
+LABSWiL3_SVBA>
+DEBUG:netmiko:In disable_paging
+DEBUG:netmiko:Command: terminal length 0
+
+DEBUG:netmiko:write_channel: b'terminal length 0\n'
+DEBUG:netmiko:Pattern is: terminal\ length\ 0
+DEBUG:netmiko:_read_channel_expect read_data: t
+DEBUG:netmiko:_read_channel_expect read_data: erm
+DEBUG:netmiko:_read_channel_expect read_data: inal
+DEBUG:netmiko:_read_channel_expect read_data:  len
+DEBUG:netmiko:_read_channel_expect read_data: gth 
+DEBUG:netmiko:_read_channel_expect read_data: 0
+LABSWiL3_SVBA>
+DEBUG:netmiko:Pattern found: terminal\ length\ 0 terminal length 0
+LABSWiL3_SVBA>
+DEBUG:netmiko:terminal length 0
+LABSWiL3_SVBA>
+DEBUG:netmiko:Exiting disable_paging
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: LABSWiL3_SVBA>
+LABSWiL3_SVBA>
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:[find_prompt()]: prompt is LABSWiL3_SVBA>
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:Pattern is: LABSWiL3_SVBA
+DEBUG:netmiko:_read_channel_expect read_data: 
+
+DEBUG:netmiko:_read_channel_expect read_data: LABSWiL3_SVBA>
+DEBUG:netmiko:Pattern found: LABSWiL3_SVBA 
+LABSWiL3_SVBA>
+DEBUG:netmiko:write_channel: b'enable\n'
+DEBUG:netmiko:Pattern is: enable
+DEBUG:netmiko:_read_channel_expect read_data: e
+DEBUG:netmiko:_read_channel_expect read_data: nab
+DEBUG:netmiko:_read_channel_expect read_data: le
+Password: 
+DEBUG:netmiko:Pattern found: enable enable
+Password: 
+DEBUG:netmiko:write_channel: b'cisco\n'
+DEBUG:netmiko:Pattern is: LABSWiL3_SVBA
+DEBUG:netmiko:_read_channel_expect read_data: 
+LABSWiL3_SVBA#
+DEBUG:netmiko:Pattern found: LABSWiL3_SVBA 
+LABSWiL3_SVBA#
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:Pattern is: LABSWiL3_SVBA
+DEBUG:netmiko:_read_channel_expect read_data: 
+
+DEBUG:netmiko:_read_channel_expect read_data: LABSWiL3_SVBA#
+DEBUG:netmiko:Pattern found: LABSWiL3_SVBA 
+LABSWiL3_SVBA#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: LABSWiL3_SVBA#
+
+DEBUG:netmiko:read_channel: LABSWiL3_SVBA#
+DEBUG:netmiko:Clear buffer detects data in the channel
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:[find_prompt()]: prompt is LABSWiL3_SVBA#
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:Pattern is: #
+DEBUG:netmiko:_read_channel_expect read_data: 
+
+DEBUG:netmiko:_read_channel_expect read_data: LABSWiL3_SVBA#
+DEBUG:netmiko:Pattern found: # 
+LABSWiL3_SVBA#
+DEBUG:netmiko:write_channel: b'configure terminal\n'
+DEBUG:netmiko:Pattern is: configure\ terminal
+DEBUG:netmiko:_read_channel_expect read_data: c
+DEBUG:netmiko:_read_channel_expect read_data: on
+DEBUG:netmiko:_read_channel_expect read_data: figu
+DEBUG:netmiko:_read_channel_expect read_data: re 
+DEBUG:netmiko:_read_channel_expect read_data: ter
+DEBUG:netmiko:_read_channel_expect read_data: mina
+DEBUG:netmiko:_read_channel_expect read_data: l
+Enter configuration commands, one per line.  End with CNTL/Z.
+LABSWiL3_SVBA(config)#
+DEBUG:netmiko:Pattern found: configure\ terminal configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+LABSWiL3_SVBA(config)#
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:Pattern is: #
+DEBUG:netmiko:_read_channel_expect read_data: 
+
+DEBUG:netmiko:_read_channel_expect read_data: LABSWiL3_SVBA(config)#
+DEBUG:netmiko:Pattern found: # 
+LABSWiL3_SVBA(config)#
+DEBUG:netmiko:write_channel: b'int lo0\n'
+DEBUG:netmiko:Pattern is: int\ lo0
+DEBUG:netmiko:_read_channel_expect read_data: i
+DEBUG:netmiko:_read_channel_expect read_data: nt l
+DEBUG:netmiko:_read_channel_expect read_data: o0
+LABSWiL3_SVBA(config-if)#
+DEBUG:netmiko:Pattern found: int\ lo0 int lo0
+LABSWiL3_SVBA(config-if)#
+DEBUG:netmiko:write_channel: b'desc test1\n'
+DEBUG:netmiko:Pattern is: desc\ test1
+DEBUG:netmiko:_read_channel_expect read_data: d
+DEBUG:netmiko:_read_channel_expect read_data: esc
+DEBUG:netmiko:_read_channel_expect read_data:  te
+DEBUG:netmiko:_read_channel_expect read_data: st1
+
+DEBUG:netmiko:Pattern found: desc\ test1 desc test1
+
+DEBUG:netmiko:Pattern is: (?:LABSWiL3_SVBA|#)
+DEBUG:netmiko:_read_channel_expect read_data: LABSWiL3_SVBA(config-if)#
+DEBUG:netmiko:Pattern found: (?:LABSWiL3_SVBA|#) LABSWiL3_SVBA(config-if)#
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:Pattern is: #
+DEBUG:netmiko:_read_channel_expect read_data: 
+
+DEBUG:netmiko:_read_channel_expect read_data: LABSWiL3_SVBA(config-if)#
+DEBUG:netmiko:Pattern found: # 
+LABSWiL3_SVBA(config-if)#
+DEBUG:netmiko:write_channel: b'end\n'
+DEBUG:netmiko:Pattern is: end
+DEBUG:netmiko:_read_channel_expect read_data: e
+DEBUG:netmiko:_read_channel_expect read_data: nd
+
+DEBUG:netmiko:Pattern found: end end
+
+DEBUG:netmiko:Pattern is: \#
+DEBUG:netmiko:_read_channel_expect read_data: LABSWiL3_SVBA#
+DEBUG:netmiko:Pattern found: \# LABSWiL3_SVBA#
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:Pattern is: #
+DEBUG:netmiko:_read_channel_expect read_data: 
+
+DEBUG:netmiko:_read_channel_expect read_data: LABSWiL3_SVBA#
+DEBUG:netmiko:Pattern found: # 
+LABSWiL3_SVBA#
+DEBUG:netmiko:exit_config_mode: end
+LABSWiL3_SVBA#
+DEBUG:netmiko:configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+LABSWiL3_SVBA(config)#int lo0
+LABSWiL3_SVBA(config-if)#desc test1
+LABSWiL3_SVBA(config-if)#end
+LABSWiL3_SVBA#
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:Pattern is: #
+DEBUG:netmiko:_read_channel_expect read_data: 
+
+DEBUG:netmiko:_read_channel_expect read_data: LABSWiL3_SVBA#
+DEBUG:netmiko:Pattern found: # 
+LABSWiL3_SVBA#
+DEBUG:netmiko:write_channel: b'configure terminal\n'
+DEBUG:netmiko:Pattern is: configure\ terminal
+DEBUG:netmiko:_read_channel_expect read_data: c
+DEBUG:netmiko:_read_channel_expect read_data: onf
+DEBUG:netmiko:_read_channel_expect read_data: igur
+DEBUG:netmiko:_read_channel_expect read_data: e te
+DEBUG:netmiko:_read_channel_expect read_data: rmin
+DEBUG:netmiko:_read_channel_expect read_data: al
+Enter configuration commands, one per line.  End with CNTL/Z.
+LABSWiL3_SVBA(config)#
+DEBUG:netmiko:Pattern found: configure\ terminal configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+LABSWiL3_SVBA(config)#
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:Pattern is: #
+DEBUG:netmiko:_read_channel_expect read_data: 
+LABSWiL3_SVBA(config)#
+DEBUG:netmiko:Pattern found: # 
+LABSWiL3_SVBA(config)#
+DEBUG:netmiko:write_channel: b'int lo1\n'
+DEBUG:netmiko:Pattern is: int\ lo1
+DEBUG:netmiko:_read_channel_expect read_data: i
+DEBUG:netmiko:_read_channel_expect read_data: nt 
+DEBUG:netmiko:_read_channel_expect read_data: lo1
+
+DEBUG:netmiko:Pattern found: int\ lo1 int lo1
+
+DEBUG:netmiko:Pattern is: (?:LABSWiL3_SVBA|#)
+DEBUG:netmiko:_read_channel_expect read_data: LABSWiL3_SVBA(config-if)#
+DEBUG:netmiko:Pattern found: (?:LABSWiL3_SVBA|#) LABSWiL3_SVBA(config-if)#
+DEBUG:netmiko:write_channel: b'no shut\n'
+DEBUG:netmiko:Pattern is: no\ shut
+DEBUG:netmiko:_read_channel_expect read_data: n
+DEBUG:netmiko:_read_channel_expect read_data: o s
+DEBUG:netmiko:_read_channel_expect read_data: hut
+
+DEBUG:netmiko:Pattern found: no\ shut no shut
+
+DEBUG:netmiko:Pattern is: (?:LABSWiL3_SVBA|#)
+DEBUG:netmiko:_read_channel_expect read_data: LABSWiL3_SVBA(config-if)#
+DEBUG:netmiko:Pattern found: (?:LABSWiL3_SVBA|#) LABSWiL3_SVBA(config-if)#
+DEBUG:netmiko:write_channel: b'desc hahaha\n'
+DEBUG:netmiko:Pattern is: desc\ hahaha
+DEBUG:netmiko:_read_channel_expect read_data: d
+DEBUG:netmiko:_read_channel_expect read_data: esc
+DEBUG:netmiko:_read_channel_expect read_data:  haha
+DEBUG:netmiko:_read_channel_expect read_data: ha
+LABSWiL3_SVBA(config-if)#
+DEBUG:netmiko:Pattern found: desc\ hahaha desc hahaha
+LABSWiL3_SVBA(config-if)#
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:Pattern is: #
+DEBUG:netmiko:_read_channel_expect read_data: 
+
+DEBUG:netmiko:_read_channel_expect read_data: LABSWiL3_SVBA(config-if)#
+DEBUG:netmiko:Pattern found: # 
+LABSWiL3_SVBA(config-if)#
+DEBUG:netmiko:write_channel: b'end\n'
+DEBUG:netmiko:Pattern is: end
+DEBUG:netmiko:_read_channel_expect read_data: e
+DEBUG:netmiko:_read_channel_expect read_data: nd
+
+DEBUG:netmiko:Pattern found: end end
+
+DEBUG:netmiko:Pattern is: \#
+DEBUG:netmiko:_read_channel_expect read_data: LABSWiL3_SVBA#
+DEBUG:netmiko:Pattern found: \# LABSWiL3_SVBA#
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:Pattern is: #
+DEBUG:netmiko:_read_channel_expect read_data: 
+
+DEBUG:netmiko:_read_channel_expect read_data: LABSWiL3_SVBA#
+DEBUG:netmiko:Pattern found: # 
+LABSWiL3_SVBA#
+DEBUG:netmiko:exit_config_mode: end
+LABSWiL3_SVBA#
+DEBUG:netmiko:configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+LABSWiL3_SVBA(config)#int lo1
+LABSWiL3_SVBA(config-if)#no shut
+LABSWiL3_SVBA(config-if)#desc hahaha
+LABSWiL3_SVBA(config-if)#end
+LABSWiL3_SVBA#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: LABSWiL3_SVBA#
+LABSWiL3_SVBA#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:[find_prompt()]: prompt is LABSWiL3_SVBA#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'show ip int br\n'
+DEBUG:netmiko:Pattern is: show\ ip\ int\ br
+DEBUG:netmiko:_read_channel_expect read_data: s
+DEBUG:netmiko:_read_channel_expect read_data: how
+DEBUG:netmiko:_read_channel_expect read_data:  ip 
+DEBUG:netmiko:_read_channel_expect read_data: int 
+DEBUG:netmiko:_read_channel_expect read_data: br
+Interface              IP-Address      OK? Method Status                Protocol
+Ethernet0/0            unassigned      YES unset  up                    up      
+Ethernet0/1            unassigned      YES unset  up                    up      
+Ethernet0/2            unassigned      YES unset  up                    up      
+Ethernet0/3            unassigned      YES unset  up                    up      
+Loopback0              unassigned      YES unset  up                    up      
+Loopback1              unassigned      YES unset  up                    up      
+Vlan100                10.100.100.3    YES NVRAM  up                    up      
+LABSWiL3_SVBA#
+DEBUG:netmiko:Pattern found: show\ ip\ int\ br show ip int br
+Interface              IP-Address      OK? Method Status                Protocol
+Ethernet0/0            unassigned      YES unset  up                    up      
+Ethernet0/1            unassigned      YES unset  up                    up      
+Ethernet0/2            unassigned      YES unset  up                    up      
+Ethernet0/3            unassigned      YES unset  up                    up      
+Loopback0              unassigned      YES unset  up                    up      
+Loopback1              unassigned      YES unset  up                    up      
+Vlan100                10.100.100.3    YES NVRAM  up                    up      
+LABSWiL3_SVBA#
