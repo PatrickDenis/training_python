@@ -1,7 +1,8 @@
 from netmiko import Netmiko
+from netmiko import file_transfer
 from getpass import getpass
 from pprint import pprint
-
+#from termcolor import colored
 
 
 password = getpass()
@@ -17,20 +18,21 @@ devices = {
 'secret' : password
 }
 
+
+source_file = "session_log.txt"
+dest_file = "dest.txt"
+direction = "put"
+file_system = "unix:"
+
 net_conn = Netmiko(**devices)
 net_conn.enable()
 print(net_conn.find_prompt())
-output = net_conn.send_command("show ip arp", use_textfsm=True)
-pprint(output)
-
-#with open("output_c1e3.txt", "w") as f:
- #   f.write(output)
-
-for each_element in output:
-    print(each_element)
-    print("*"*70)
-    for x, y in each_element.items():
-        print(x," ---> ",y)
-        
-
-    
+transfer_dict = file_transfer(
+    net_conn,
+    source_file=source_file,
+    dest_file=dest_file,
+    file_system=file_system,
+    direction=direction,
+    overwrite_file=True,
+)
+print(transfer_dict)

@@ -1,15 +1,18 @@
+
+#convert data structure [{}]
+
 from netmiko import Netmiko
 from getpass import getpass
 from pprint import pprint
 
 
 
-password = getpass()
+password = 'cisco'
 csr1 = '10.100.100.3'
 csr2 = '10.100.100.5'
 
 devices = {
-"host" : csr1,
+"host" : csr2,
 "username" : 'admin',
 "password" : password,
 "device_type" : 'cisco_ios', 
@@ -20,17 +23,13 @@ devices = {
 net_conn = Netmiko(**devices)
 net_conn.enable()
 print(net_conn.find_prompt())
-output = net_conn.send_command("show ip arp", use_textfsm=True)
+output = net_conn.send_command("show cdp neighbor", use_textfsm=True)
 pprint(output)
+print(len(output)) #will help to see how many element in the list that become a dictionary after in this example
 
-#with open("output_c1e3.txt", "w") as f:
- #   f.write(output)
+new_output = []
+#creating new data structure out of this one
 
-for each_element in output:
-    print(each_element)
-    print("*"*70)
-    for x, y in each_element.items():
-        print(x," ---> ",y)
-        
-
+for k, v in output.items():
+    print(k,   v)
     

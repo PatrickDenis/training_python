@@ -15,13 +15,15 @@ devices = {
 "device_type" : 'cisco_ios', 
 "session_log" : 'session_log.txt',
 "global_delay_factor" : 4, #double by the number assign here
-'secret' : password
+'secret' : password,
+#'fast_cli' : True    #faster but less reliable
 }
 
 net_conn = Netmiko(**devices)
 net_conn.enable()
 print(net_conn.find_prompt())
-output = net_conn.send_command("show ip int br")
+output = net_conn.send_command("show ip int br", delay_factor=4) #if you have both set up it will pick up the biggest one
+
 pprint(output)
 
 with open("output_c1e3.txt", "w") as f:
